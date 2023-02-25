@@ -47,3 +47,6 @@ TagManager:
   - name: gameworld
     uniqueID: 4039256919
     locked: 0
+  - name: enemy
+    uniqueID: 1728647209
+    locked: 0
