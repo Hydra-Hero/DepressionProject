@@ -7,7 +7,7 @@ public class playermovement : MonoBehaviour
     public float speed;
     public float jump_force;
     private float move_input;
-
+    public bool ismoving;
     private Rigidbody2D rb;
 
     private bool facingRight = true;
@@ -38,6 +38,7 @@ public class playermovement : MonoBehaviour
     public PhysicsMaterial2D friction;
 
 
+
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -47,11 +48,15 @@ public class playermovement : MonoBehaviour
     }
 
 
+
+
+
     // Update is called once per frame
     void FixedUpdate()
     {
         move();
         SlopeCheck();
+
     }
 
     void Update()
@@ -62,7 +67,9 @@ public class playermovement : MonoBehaviour
     }
 
 
-    private void checkground()
+
+
+private void checkground()
     {
         is_grounded = Physics2D.OverlapCircle(ground_check.position, check_radius, what_is_ground);
 
@@ -76,10 +83,7 @@ public class playermovement : MonoBehaviour
     {
         is_grounded = Physics2D.OverlapCircle(ground_check.position, check_radius, what_is_ground);
 
-        if (is_grounded && rb.velocity.y <=0.01f)
-        {
-            
-        }
+
 
         move_input = Input.GetAxis("Horizontal");
 
@@ -88,14 +92,17 @@ public class playermovement : MonoBehaviour
         if (is_grounded && !is_on_slope && !is_jumping)
         {
             rb.velocity = new Vector2(move_input * speed, 0.0f);
+            ismoving = true;
         }
         else if (is_grounded && is_on_slope && !is_jumping)
         {
             rb.velocity = new Vector2(speed * slope_normal_perp.x * - move_input, speed * slope_normal_perp.y * -move_input);
+            ismoving = true;
         }
         else if (!is_grounded)
         {
             rb.velocity = new Vector2(move_input * speed, rb.velocity.y);
+            ismoving = true;
         }
 
         if (move_input == 0)
