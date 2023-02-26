@@ -13,6 +13,7 @@ public class enemyattack : MonoBehaviour
     public float attack_speed = 2f;
     private float next_attack_time = 0f;
 
+
     // Update is called once per frame
     void Update()
     {
@@ -40,6 +41,8 @@ public class enemyattack : MonoBehaviour
             player.GetComponent<playerhealth>().TakeDamage(attack_damage);
 
             Debug.Log("hit " + player.name);
+
+
         }
     }
 

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class playerhealth : MonoBehaviour
 {
     public int max_health = 100;
@@ -9,6 +10,7 @@ public class playerhealth : MonoBehaviour
     public playermovement playermovement;
     public playercombat playercombat;
     public Animator anim;
+
 
     // Start is called before the first frame update
     void Start()
@@ -48,5 +50,4 @@ public class playerhealth : MonoBehaviour
         yield return new WaitForSeconds(3f);
         gameObject.SetActive(false);
     }
-
 }
