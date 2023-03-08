@@ -6,7 +6,7 @@ public class enemy : MonoBehaviour
 {
     public int max_health = 100;
     private int current_health;
-
+    public float knock_back_force = 2.0f;
     public Animator anim;
 
     // Start is called before the first frame update
@@ -44,5 +44,6 @@ public class enemy : MonoBehaviour
         yield return new WaitForSeconds(2.30f);
         gameObject.SetActive(false);
     }
+
 
 }
