@@ -125,7 +125,7 @@ TextureImporter:
         width: 14
         height: 14
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -205,9 +205,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 115
-        y: 50
+        y: 32
         width: 10
-        height: 14
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -605,10 +605,10 @@ TextureImporter:
         serializedVersion: 2
         x: 49
         y: 16
-        width: 14
+        width: 13
         height: 14
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -626,10 +626,10 @@ TextureImporter:
         serializedVersion: 2
         x: 49
         y: 30
-        width: 14
+        width: 13
         height: 19
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -637,27 +637,6 @@ TextureImporter:
       bones: []
       spriteID: 9236b60d6680ae8479981d5a1f0d1f2d
       internalID: 771673777
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Stronghold_Details_25
-      rect:
-        serializedVersion: 2
-        x: 115
-        y: 32
-        width: 10
-        height: 18
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0b2a29364fe262b47ac912cf189b2a67
-      internalID: 1981810806
       vertices: []
       indices: 
       edges: []
@@ -677,7 +656,6 @@ TextureImporter:
       Stronghold_Details_22: -2130598144
       Stronghold_Details_12: 1935042036
       Stronghold_Details_15: 1874266986
-      Stronghold_Details_25: 1981810806
       Stronghold_Details_7: 1715032063
       Stronghold_Details_18: 657967950
       Stronghold_Details_21: 346053666
