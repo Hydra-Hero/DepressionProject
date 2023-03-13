@@ -10,12 +10,13 @@ public class playerhealth : MonoBehaviour
     public playermovement playermovement;
     public playercombat playercombat;
     public Animator anim;
-
+    public healthbar healthbar;
 
     // Start is called before the first frame update
     void Start()
     {
         current_health = max_health;
+        healthbar.SetMaxHealth(max_health);
     }
 
     public void TakeDamage(int Damage)
@@ -24,7 +25,7 @@ public class playerhealth : MonoBehaviour
         anim.SetTrigger("hit");
 
         current_health -= Damage;
-
+        healthbar.SetHealth(current_health);
         //hurt anim
 
         if (current_health <= 0)
