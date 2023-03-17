@@ -5,7 +5,7 @@ using UnityEngine;
 public class enemy : MonoBehaviour
 {
     public int max_health = 100;
-    private int current_health;
+    public int current_health;
     public float knock_back_force = 2.0f;
     public Animator anim;
 
