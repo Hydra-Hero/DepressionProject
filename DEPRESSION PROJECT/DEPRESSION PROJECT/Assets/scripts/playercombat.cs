@@ -29,8 +29,6 @@ public class playercombat : MonoBehaviour
 
     }
 
-
-
     private void Attack()
     {
         //play attack anim
@@ -40,8 +38,14 @@ public class playercombat : MonoBehaviour
 
         foreach (Collider2D enemy in hit_enemies)
         {
-
-            enemy.GetComponent<enemy>().TakeDamage(attack_damage);
+            if (enemy.GetComponent<boss>() != null)
+            {
+                enemy.GetComponent<boss>().TakeDamage(GetComponent<Collider2D>(), attack_damage);
+            }
+            else
+            {
+                enemy.GetComponent<enemy>().TakeDamage(attack_damage);
+            }
 
             Debug.Log("hit " + enemy.name);
         }
