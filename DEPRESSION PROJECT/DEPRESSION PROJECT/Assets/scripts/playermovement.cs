@@ -69,7 +69,7 @@ public class playermovement : MonoBehaviour
 
 
 
-private void checkground()
+    private void checkground()
     {
         is_grounded = Physics2D.OverlapCircle(ground_check.position, check_radius, what_is_ground);
 

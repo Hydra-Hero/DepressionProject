@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class playerhealth : MonoBehaviour
 {
-    public int max_health = 100;
+    public int max_health = 200;
     public int current_health;
     public playermovement playermovement;
     public playercombat playercombat;

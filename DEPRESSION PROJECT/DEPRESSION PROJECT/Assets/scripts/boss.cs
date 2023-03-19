@@ -22,6 +22,8 @@ public class boss : MonoBehaviour
     public LayerMask playerlayer;
     private Animator animator; // Reference to the animator component
     public int attack_damage = 50;
+    public GameObject hidden_passage;
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -162,11 +164,13 @@ public class boss : MonoBehaviour
     public void TakeDamage(Collider2D collider, int damage)
     {
         currentHealth -= damage;
+        animator.SetTrigger("hit");
         if (currentHealth <= 0f)
         {
             currentHealth = 0f;
             animator.SetBool("isdead", true);
             Destroy(gameObject, 2f);
+            Destroy(hidden_passage);
         }
     }
 
